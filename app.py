@@ -14,23 +14,23 @@ app=Flask(__name__)
 from sklearn.base import BaseEstimator, TransformerMixin
 
 
-# class Logger(BaseEstimator, TransformerMixin):
-#     def __init__(self, apply_log = True):
-#         self.apply_log = apply_log
+class Logger(BaseEstimator, TransformerMixin):
+    def __init__(self, apply_log = True):
+        self.apply_log = apply_log
         
-#     def fit(self, X, y=None):
-#         return self
+    def fit(self, X, y=None):
+        return self
     
-#     def transform(self, X, y=None):
-#         logX = X.copy()
+    def transform(self, X, y=None):
+        logX = X.copy()
         
-#         if self.apply_log:
-#             logX = np.log1p(X)
-#             return logX
+        if self.apply_log:
+            logX = np.log1p(X)
+            return logX
     
-#         else: return X
+        else: return X
 
-## Load the model
+# Load the model
 cancerDetection = joblib.load('cancerDetectionStakingModel_joblib')
 
 scalar= joblib.load('std_sca_joblib')
@@ -64,8 +64,7 @@ def predict():
 
     tuned_names = ['Logistic Regression', 'SVC', 'GradientBoosting', 'RandomForest', 'KNNeighbors']
 
-    logger = Logger()
-    
+
     logreg_tuned = joblib.load('logreg_tuned_joblib')
     std_sca = joblib.load('std_sca_joblib')
     svc_tuned = joblib.load('svc_tuned_joblib')
@@ -111,6 +110,7 @@ def predict():
 
 
 if __name__=="__main__":
+    logger = Logger()
     app.run(debug=False)
    
      
