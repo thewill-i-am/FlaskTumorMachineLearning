@@ -64,6 +64,8 @@ def predict():
 
     tuned_names = ['Logistic Regression', 'SVC', 'GradientBoosting', 'RandomForest', 'KNNeighbors']
 
+    logger = Logger()
+    
     logreg_tuned = joblib.load('logreg_tuned_joblib')
     std_sca = joblib.load('std_sca_joblib')
     svc_tuned = joblib.load('svc_tuned_joblib')
