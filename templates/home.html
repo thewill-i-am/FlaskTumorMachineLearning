@@ -1,48 +1,61 @@
 <!DOCTYPE html>
-<html >
+<html>
 
 <head>
-  <meta charset="UTF-8">
-  <title>ML API</title>
-  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <meta charset="UTF-8">
+    <title>ML API</title>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
 
-  
+
 </head>
 
 <body>
- <div class="login">
-	<h1>Boston House Price Prediction</h1>
+    <div class="login">
+        <h1>Prediccion de tipo de tumor</h1>
 
-     <!-- Main Input For Receiving Query to our ML -->
-    <form action="{{ url_for('predict')}}"method="post">
-      <input type="text" name="CRIM" placeholder="CRIM" required="required" /><br>
-    	<input type="text" name="ZN" placeholder="ZN" required="required" /><br>
-        <input type="text" name="INDUS" placeholder="INDUS" required="required" /><br>
-        <input type="text" name="CHAS" placeholder="CHAS" required="required" /><br>
-        <input type="text" name="NOX" placeholder="NOX" required="required" /><br>
-        <input type="text" name="RM" placeholder="RM" required="required" /><br>
-        <input type="text" name="Age" placeholder="Age" required="required" /><br>
-        <input type="text" name="DIS" placeholder="DIS" required="required" /><br>
-        <input type="text" name="RAD" placeholder="RAD" required="required" /><br>
-        <input type="text" name="TAX" placeholder="TAX" required="required" /><br>
-        <input type="text" name="PTRATIO" placeholder="PTRATIO" required="required" /><br>
-        <input type="text" name="B" placeholder="B" required="required" /><br>
-        <input type="text" name="LSTAT" placeholder="LSTAT" required="required" /><br>
+        <form action="{{ url_for('predict')}}" method="post">
 
-       
+            radius_mean : <input type="text" name="1" placeholder="radius_mean" required="required" /><br></p>
+            texture_mean : <input type="text" name="2" placeholder="texture_mean" required="required" /><br></p>
+            perimeter_mean : <input type="text" name="3" placeholder="perimeter_mean" required="required" /><br></p>
+            area_mean : <input type="text" name="4" placeholder="area_mean" required="required" /><br></p>
+            smoothness_mean : <input type="text" name="5" placeholder="smoothness_mean" required="required" /><br></p>
+            compactness_mean : <input type="text" name="6" placeholder="compactness_mean" required="required" /><br></p>
+            concavity_mean : <input type="text" name="7" placeholder="concavity_mean" required="required" /><br></p>
+            concave points_mean : <input type="text" name="8" placeholder="concave points_mean" required="required" /><br></p>
+            radius_se : <input type="text" name="9" placeholder="radius_se" required="required" /><br></p>
+            texture_se : <input type="text" name="10" placeholder="texture_se" required="required" /><br></p>
+            perimeter_se : <input type="text" name="11" placeholder="perimeter_se" required="required" /><br></p>
+            area_se : <input type="text" name="12" placeholder="area_se" required="required" /><br></p>
+            smoothness_se : <input type="text" name="13" placeholder="smoothness_se" required="required" /><br></p>
+            compactness_se : <input type="text" name="14" placeholder="compactness_se" required="required" /><br></p>
+            concavity_se : <input type="text" name="15" placeholder="concavity_se" required="required" /><br></p>
+            symmetry_se : <input type="text" name="16" placeholder="symmetry_se" required="required" /><br></p>
+            fractal_dimension_se : <input type="text" name="17" placeholder="fractal_dimension_se" required="required" /><br></p>
+            radius_worst : <input type="text" name="18" placeholder="radius_worst" required="required" /><br></p>
+            texture_worst : <input type="text" name="19" placeholder="texture_worst" required="required" /><br></p>
+            perimeter_worst : <input type="text" name="20" placeholder="perimeter_worst" required="required" /><br></p>
+            area_worst : <input type="text" name="21" placeholder="area_worst" required="required" /><br></p>
+            smoothness_worst : <input type="text" name="22" placeholder="smoothness_worst" required="required" /><br></p>
+            concavity_worst : <input type="text" name="23" placeholder="concavity_worst" required="required" /><br></p>
+            concave points_worst : <input type="text" name="24" placeholder="concave points_worst" required="required" /><br></p>
+            symmetry_worst : <input type="text" name="25" placeholder="symmetry_worst" required="required" /><br></p>
 
-        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
-    </form>
 
-   <br>
-   <br>
-  
-   
- </div>
- {{prediction_text}}
+
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predecir</button>
+        </form>
+
+        <br></p>
+        <br></p>
+
+
+    </div>
+    {{prediction_text}}
 
 </body>
+
 </html>

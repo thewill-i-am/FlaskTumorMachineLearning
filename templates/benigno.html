@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>ML API</title>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+
+</head>
+
+<body>
+    <div class="login">
+        <h1>Prediccion de tipo de tumor</h1>
+
+        <form action="{{ url_for('predict')}}" method="post">
+
+            radius_mean : <input type="text" value="11.410000" name="1" placeholder="CRIM" required="required" /><br></p>
+            texture_mean : <input type="text" value="10.820000" name="2" placeholder="ZN" required="required" /><br></p>
+            perimeter_mean : <input type="text" value="73.340000" name="3" placeholder="INDUS" required="required" /><br></p>
+            area_mean : <input type="text" value="403.300000" name="4" placeholder="CHAS" required="required" /><br></p>
+            smoothness_mean : <input type="text" value="0.093730" name="5" placeholder="NOX" required="required" /><br></p>
+            compactness_mean : <input type="text" value="0.066850" name="6" placeholder="RM" required="required" /><br></p>
+            concavity_mean : <input type="text" value="0.035120" name="7" placeholder="Age" required="required" /><br></p>
+            concave points_mean : <input type="text" value="0.026230" name="8" placeholder="DIS" required="required" /><br></p>
+            radius_se : <input type="text" value="0.140800" name="9" placeholder="RAD" required="required" /><br></p>
+            texture_se : <input type="text" value="0.460700" name="10" placeholder="TAX" required="required" /><br></p>
+            perimeter_se : <input type="text" value="1.103000" name="11" placeholder="PTRATIO" required="required" /><br></p>
+            area_se : <input type="text" value="10.500000" name="12" placeholder="B" required="required" /><br></p>
+            smoothness_se : <input type="text" value="0.006040" name="123" placeholder="B" required="required" /><br></p>
+            compactness_se : <input type="text" value="0.015290" name="13" placeholder="LSTAT" required="required" /><br></p>
+            concavity_se : <input type="text" value="0.015140" name="14" placeholder="INDUS" required="required" /><br></p>
+            symmetry_se : <input type="text" value="0.013440" name="15" placeholder="CHAS" required="required" /><br></p>
+            fractal_dimension_se : <input type="text" value="0.002206" name="16" placeholder="NOX" required="required" /><br></p>
+            radius_worst : <input type="text" value="12.820000" name="17" placeholder="RM" required="required" /><br></p>
+            texture_worst : <input type="text" value="15.970000" name="18" placeholder="Age" required="required" /><br></p>
+            perimeter_worst : <input type="text" value="83.740000" name="19" placeholder="DIS" required="required" /><br></p>
+            area_worst : <input type="text" value="510.500000" name="20" placeholder="RAD" required="required" /><br></p>
+            smoothness_worst : <input type="text" value="0.154800" name="21" placeholder="TAX" required="required" /><br></p>
+            concavity_worst : <input type="text" value="0.210200" name="22" placeholder="PTRATIO" required="required" /><br></p>
+            concave points_worst : <input type="text" value="0.089580" name="23" placeholder="B" required="required" /><br></p>
+            symmetry_worst : <input type="text" value="0.301600" name="24" placeholder="B" required="required" /><br></p>
+
+
+
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predecir</button>
+        </form>
+
+        <br></p>
+        <br></p>
+
+
+    </div>
+    {{prediction_text}}
+
+</body>
+
+</html>
