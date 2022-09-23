@@ -2,6 +2,7 @@ from sklearn.base import BaseEstimator, TransformerMixin
 import numpy as np
 import joblib
 
+global Logger 
 
 class Logger(BaseEstimator, TransformerMixin):
     def __init__(self, apply_log = True):
@@ -19,19 +20,4 @@ class Logger(BaseEstimator, TransformerMixin):
     
         else: return X
         
-# @app.before_first_request
-# def load_models():
-#     global logreg_tuned
-#     global std_sca
-#     global svc_tuned
-#     global gdb_tuned
-#     global rf_tuned
-#     global knn_tuned
-
-
-#     logreg_tuned = joblib.load('logreg_tuned_joblib')
-#     std_sca = joblib.load('std_sca_joblib')
-#     svc_tuned = joblib.load('svc_tuned_joblib')
-#     gdb_tuned = joblib.load('gdb_tuned_joblib')
-#     rf_tuned = joblib.load('rf_tuned_joblib')
-#     knn_tuned = joblib.load('knn_tuned_joblib')
+Logger = Logger
